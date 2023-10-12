@@ -30,16 +30,35 @@
 
  <script>
   var input = document.getElementById("textInput");
-  var button = document.getElementByID("alertButton");
+  var button = document.getElementById("alertButton");
 
   function showAlert() {
     var inputText = input.value;
     alert("You entered: " + inputText);
   }
 
-  button.addEventListener("click", showAlert());
+  button.addEventListener("click", showAlert);
  </script>
 </body>
+
+<head>
+  <title>Random Number Generator</title>
+</head>
+ <body>
+   <button id="generateButton">Generate Random Number</button>
+  <p id="randomNUmber"></p>
+
+  <script>
+    var button = document.getElementById("generateButton");
+    var paragraph = document.getElementById("randomNumber");
+
+   function generateRandomNumber() {
+    var randomNumber = Math.floor(Math.random() * 10) + 1;
+    paragraph.textContext = "Random Number: " + randomNUmber;
+   }
+   button.addEventListener("click", generateRandomNumber);
+  </script>
+ </body>
 
 
 
